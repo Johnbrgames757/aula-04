@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f9f9f9;
+
+}
+
+a{
+    color: darkgreen;
+    text-decoration: none;
+}
+
+.main-header{
+    padding: 2em;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align:  center;
+}
+
+.main-header h1{
+    font-size: 4em;
+    margin-bottom: 2em;
+    line-height: 1.2em;
+}
+
+.main-header h1 span {
+    color: #b50d10;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2em;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    background: #f1f1f1;
+    margin-bottom: 2em;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.card h3{
+    margin-bottom: 2em;
+}
+
+.card div{
+padding: 2em;
+}
+
+.card:nth-child(even) img{
+    order: 2
+}
+
+.btn{
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 0.7em 1.8em;
+    margin-top: 2em;
+}
+
+.btn:hover{
+    background-color:green;
+opacity: 0.7;
+}
+
+
+.galeria{
+    display: flex;
+    height: 20em;
+    margin: 2em;
+    gap: 0.5em;
+}
+
+.galeria div{
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:75%;
+    transition: all 0.8s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.galeria div:hover{
+flex: 2em;
+}
+
+.galeria:hover div:not(:hover){
+    filter: blur(3px);
+    filter: grayscale(1)
+    
+
+}
